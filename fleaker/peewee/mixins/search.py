@@ -72,7 +72,7 @@ Example:
 
 from functools import reduce
 
-from playhouse import Case
+from peewee import Case
 from peewee import operator
 
 from fleaker.orm import PeeweeModel
