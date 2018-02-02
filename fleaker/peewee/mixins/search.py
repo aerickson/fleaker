@@ -72,7 +72,7 @@ Example:
 
 from functools import reduce
 
-from playhouse.shortcuts import case
+from playhouse import Case
 from peewee import operator
 
 from fleaker.orm import PeeweeModel
@@ -162,7 +162,7 @@ class SearchMixin(PeeweeModel):
                 (field ** full_like_term)
             )
 
-            order_by.append(case(None, (
+            order_by.append(Case(None, (
                 # Straight matches should show up first
                 (field == term, 0),
                 # Similar terms should show up second
